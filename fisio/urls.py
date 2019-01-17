@@ -18,6 +18,9 @@ from django.urls import path, include # new
 from django.conf.urls import url # new
 from django.views.generic.base import TemplateView # new
 from boards import views
+from django.contrib.auth import views as auth_views
+
+from akun import views as akun_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +31,9 @@ urlpatterns = [
     url(r'^$', views.homes, name='home'),
     url(r'^board/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
     url(r'^board/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
+
+    url(r'^signup/$', akun_views.signup, name='signup'),
+    url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+    url(r'^login/$', auth_views.LoginView.as_view(template_name='loginAkun.html'), name='login'),
+
 ] 

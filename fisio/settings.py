@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     'widget_tweaks', # utk form
     'boards', # new
+    'akun', # new Accounts hehehe
 ]
 
 MIDDLEWARE = [
