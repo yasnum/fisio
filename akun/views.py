@@ -29,7 +29,7 @@ def signup(request):
 class UserUpdateView(UpdateView):
     model = User
     fields = ('first_name', 'last_name', 'email', )
-    template_name = 'my_account.html'
+    template_name = 'my_akun.html'
     success_url = reverse_lazy('my_account')
 
     def get_object(self):
