@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'widget_tweaks', # utk form
     'boards', # new
     'akun', # new Accounts hehehe
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
